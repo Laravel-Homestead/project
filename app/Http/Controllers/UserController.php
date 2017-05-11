@@ -31,8 +31,7 @@ class UserController extends Controller
     public function getSignIn(){
     	return view('user.signin');
     }
-
-    public function postSignIn(Request $request){
+	public function postSignIn(Request $request){
     	$this->validate($request, [
     		'email' => 'email|required',
     		'password' => 'required|min:4'
